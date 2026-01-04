@@ -1,0 +1,177 @@
+.footer {
+    background: var(--color-black);
+    color: var(--color-light-gray);
+    padding: var(--space-16) 0 var(--space-6);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: var(--space-12);
+    margin-bottom: var(--space-12);
+    padding-bottom: var(--space-12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-section h3 {
+    font-size: var(--text-xl);
+    color: var(--color-white);
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.footer-logo-image {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-logo .logo-text {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-description {
+    font-size: var(--text-base);
+    line-height: 1.8;
+    color: var(--color-gray);
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: var(--space-3);
+}
+
+.footer-links a {
+    color: var(--color-light-gray);
+    font-size: var(--text-base);
+    transition: all var(--transition-base);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--color-accent);
+    transform: translateX(5px);
+}
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+    font-size: var(--text-base);
+}
+
+.contact-icon {
+    font-size: var(--text-lg);
+    flex-shrink: 0;
+}
+
+.footer-contact a {
+    color: var(--color-light-gray);
+    transition: color var(--transition-base);
+}
+
+.footer-contact a:hover {
+    color: var(--color-accent);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-6);
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.footer-bottom p {
+    font-size: var(--text-sm);
+    color: var(--color-gray);
+    margin: 0;
+}
+
+.footer-social {
+    display: flex;
+    gap: var(--space-6);
+}
+
+.social-link {
+    color: var(--color-light-gray);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.social-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    transition: width var(--transition-base);
+}
+
+.social-link:hover {
+    color: var(--color-accent);
+}
+
+.social-link:hover::after {
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: var(--space-12) 0 var(--space-6);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
